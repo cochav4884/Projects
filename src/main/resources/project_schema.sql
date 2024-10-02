@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS project;
 
 CREATE TABLE project (
     project_id INT NOT NULL,
-    PRIMARY KEY (project_id),
+    PRIMARY KEY (project_id) AUTO_INCREMENT,
     project_name VARCHAR(128) NOT NULL,
     estimated_hours DECIMAL(7,2) NULL,
     actual_hours DECIMAL(7,2) NULL,
