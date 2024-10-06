@@ -58,6 +58,7 @@ public class ProjectsApp {
     BigDecimal estimatedHours = getDecimalInput("Enter the estimated hours");
     BigDecimal actualHours = getDecimalInput("Enter the actual hours");
     Integer difficulty = getIntInput("Enter the project difficulty (1-5)");
+    validateDifficulty(difficulty);
     String notes = getStringInput("Enter the project notes");
 
     Project project = new Project();
@@ -72,7 +73,14 @@ public class ProjectsApp {
     System.out.println("You have successfully created project: " + dbProject);
   }
 
-
+  private Integer validateDifficulty(Integer difficulty) {
+	  if (difficulty < 1 || difficulty > 5) {
+		  throw new DbException("Difficulty must be between 1 and 5.");
+	  }
+	  return difficulty;
+  }
+  
+  
   private BigDecimal getDecimalInput(String prompt) {
     String input = getStringInput(prompt);
 
