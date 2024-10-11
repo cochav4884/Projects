@@ -31,5 +31,4 @@ public class DbConnection {
 			throw new DbException(e);
 		}
 	}
-
 }
