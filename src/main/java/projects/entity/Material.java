@@ -5,10 +5,6 @@ package projects.entity;
 
 import java.math.BigDecimal;
 
-/**
- * @author Promineo
- *
- */
 public class Material {
   private Integer materialId;
   private Integer projectId;
